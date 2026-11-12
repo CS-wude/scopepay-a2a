@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#ffffff"><title>ScopePay · 服务与交易</title><link rel="stylesheet" href="/market.css"><script type="module" src="/market.js"></script></head>
+<body><a class="skip" href="#content">跳到内容</a><div class="shell">
+<aside class="sidebar"><a class="brand" href="/market">ScopePay</a><p id="role-label"></p><nav id="nav" aria-label="功能导航"></nav></aside>
+<header><span class="breadcrumb">工作空间 <span>/</span> <strong>服务与交易</strong></span><div class="roles" aria-label="本地工作区视角"><button data-role="buyer">买家端</button><button data-role="seller">卖家端</button><button data-role="platform">平台端</button></div></header>
+<main id="content" tabindex="-1"><div class="page-title"><div><p class="eyebrow" id="eyebrow"></p><h1 id="title"></h1><p id="subtitle"></p></div><button id="refresh" class="quiet">刷新状态 ↻</button></div>
+<div id="overview-summary" class="overview-summary"></div><div id="notice" role="status" aria-live="polite"></div><div id="view"></div></main>
+</div>
+<dialog id="service-dialog" aria-labelledby="service-dialog-title"><div class="dialog-heading"><h2 id="service-dialog-title">创建服务草稿</h2><button type="button" id="service-dialog-close" aria-label="关闭服务表单">关闭</button></div><div id="service-form-body"></div><p id="service-dialog-notice" role="status" aria-live="polite"></p><div class="dialog-actions"><button id="service-dialog-cancel" type="button">取消</button><button type="submit" form="service-form" class="primary">保存草稿</button></div></dialog>
+<dialog id="publish-dialog" aria-labelledby="publish-title"><h2 id="publish-title">人工上架</h2><p id="publish-service-name"></p><div class="hint"><strong>审核意见</strong><p id="publish-review-reason"></p></div><form id="publish-form"><label for="publish-reason">上架理由</label><textarea id="publish-reason" required maxlength="1000" placeholder="填写复核结果及上架依据"></textarea><p id="publish-error" role="status" aria-live="polite"></p><div class="dialog-actions"><button type="button" id="publish-cancel">取消</button><button type="submit" id="publish-confirm" class="primary">确认上架</button></div></form></dialog>
+</body></html>

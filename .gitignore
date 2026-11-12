@@ -1,0 +1,12 @@
+node_modules/
+.env
+.env.*
+!.env.example
+.scopepay/
+.evidence/
+*.sqlite
+*.sqlite-*
+*.log
+.DS_Store
+FORK_REPORT.md
+SANITIZATION_REPORT.md

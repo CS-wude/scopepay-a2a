@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>ScopePay — agents agree, work moves.</title><link rel="stylesheet" href="/style.css"><script type="module" src="/app.js"></script></head>
+<body>
+<header><a class="brand" href="/">scopepay<span>↗</span></a><div class="top-links"><span>A2A commerce lab</span><span class="sandbox">SANDBOX ONLY</span></div></header>
+<main>
+<section class="intro"><div><p class="eyebrow">THE CHANGE ORDER, REIMAGINED</p><h1>New scope.<br>Same understanding.</h1><p class="lead">Two agents negotiate the extra work, agree within their owners’ limits, and get it delivered.</p></div><div class="intro-note"><span class="note-number">01 / LOCAL PROTOTYPE</span><p>“Can we make it blue,<br>add French subtitles,<br>and get it today?”</p><span>A SMALL REQUEST. THREE DIFFERENT OBLIGATIONS.</span></div></section>
+<section class="environment" aria-label="Environment"><span id="model-badge">Model: loading</span><span id="payment-badge">Payments: loading</span><span id="network-badge">Agents: connecting</span><p id="mode-note">Loading local configuration…</p></section>
+<div class="workspace">
+<aside>
+<section class="panel project"><div class="section-heading"><span class="eyebrow">THE ORIGINAL DEAL</span><span id="version" class="pill">v1</span></div><h2>Aurora product film</h2><p>30 seconds. English subtitles.<br>One color revision included.<br>Standard delivery tomorrow.</p><div class="scope-items"><span>Color revision <b>Included</b></span><span>French SRT <b>$10.00</b></span><span>Rush delivery <b>$5.00</b></span></div><button id="new-project" class="text-button">Start a fresh project ↗</button></section>
+<section class="panel policies"><span class="eyebrow">OWNER AUTHORIZATION</span><h2>Buyer’s boundaries</h2><form id="policy-form"><div class="field-row"><label>Per change, USD<input id="single-cap" type="number" min="0" max="20" step="0.01" value="10" required></label><label>Total, USD<input id="total-cap" type="number" min="0" max="100" step="0.01" value="20" required></label></div><label class="check"><input id="require-french" type="checkbox" checked> French subtitles are required</label><label class="check"><input id="allow-standard" type="checkbox" checked> Standard delivery is acceptable</label><button class="secondary" type="submit">Save authorization</button></form><p id="budget-note" class="muted">Reserved / spent: $0.00</p><p class="tiny">Private policy stays with the buyer and transaction verifier. The creator sees the proposed scope.</p></section>
+</aside>
+<section class="transaction panel">
+<div class="section-heading"><span class="eyebrow">THE CHANGE ROOM</span><span id="run-state" class="pill">Ready</span></div>
+<div class="agent-pair"><div><span class="avatar buyer">B</span><span><b>Buyer agent</b><small>Protect the brief & budget</small></span></div><span class="connection">← A2A →</span><div><span class="avatar seller">C</span><span><b>Creator agent</b><small>Price, fulfill & deliver</small></span></div></div>
+<div class="run-controls"><label for="case-select" class="sr-only">Change request</label><select id="case-select"><option value="standard">Blue + French subtitles + rush delivery</option><option value="included">Included color revision only</option></select><button id="start" class="primary">Let agents negotiate <span>↗</span></button></div>
+<div id="empty-state" class="empty"><span class="empty-symbol">↔</span><h3>Let the brief do the talking.</h3><p>The agents will separate included work from additions,<br>negotiate scope, then transact within the saved authorization.</p><div class="mini-flow"><span>Quote</span><span>Negotiate</span><span>Pay</span><span>Deliver</span></div></div>
+<ol id="timeline" class="timeline" aria-live="polite"></ol>
+<div id="run-error" role="status"></div>
+<div id="receipt" class="receipt" hidden></div>
+<div id="delivery" class="delivery" hidden><div class="section-heading"><div><span class="eyebrow">DELIVERY ACCEPTED</span><h3>French subtitles. Ready to use.</h3></div><a id="download" class="secondary" href="#">Download SRT ↓</a></div><p id="delivery-note" class="muted"></p><pre id="subtitle-preview"></pre></div>
+<div class="operator"><span id="run-reference">No active run</span><button id="pause" class="text-button">Pause new payments</button><button id="recover" class="text-button" hidden>Check original payment</button></div>
+</section>
+</div>
+<section class="history"><div class="section-heading"><span class="eyebrow">LOCAL AUDIT TRAIL</span><span>Saved across refreshes & restarts</span></div><div id="history-list"></div></section>
+<p id="notice" role="alert"></p>
+<footer><span>scopepay / a small change, a clear agreement.</span><span>Signed quotes · Owner policies · Verified receipts</span></footer>
+</main>
+</body></html>

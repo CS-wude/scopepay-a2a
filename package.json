@@ -1,0 +1,27 @@
+{
+  "name": "paypal-sandbox-local-demo",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node --test",
+    "braintree:status": "node braintree-smoke.mjs --status",
+    "braintree:smoke": "node braintree-smoke.mjs",
+    "scopepay:start": "node scopepay/start.mjs",
+    "scopepay:develop": "node scopepay/development.mjs",
+    "scopepay:local": "node scopepay/local-live.mjs",
+    "scopepay:evaluate": "node scopepay/evaluate.mjs",
+    "scopepay:acceptance": "node scopepay/acceptance.mjs",
+    "scopepay:smoke": "node scopepay/smoke.mjs",
+    "scopepay:check": "node scopepay/check.mjs",
+    "check": "node --check server.mjs && node --check paypal.mjs && node --check public/app.js && node --check braintree.mjs && node --check braintree-smoke.mjs"
+  },
+  "dependencies": {
+    "@a2a-js/sdk": "1.3.0",
+    "braintree": "3.41.0",
+    "express": "5.1.0"
+  }
+}

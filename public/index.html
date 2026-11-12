@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>PayPal 沙盒 · 接入验证</title><link rel="stylesheet" href="/style.css"><script src="/app.js" defer></script></head>
+<body><main>
+  <header><a class="brand" href="/">P<span> / 本地接入实验</span></a><span class="tag">SANDBOX ONLY</span></header>
+  <section class="intro"><p class="eyebrow">PAYPAL API DEMO</p><h1>把第一笔测试付款<br>走完整。</h1><p class="lead">创建订单、买家批准、后台收款，再核对结果。<br>全程使用虚拟账户和沙盒资金。</p></section>
+  <div class="layout"><section class="card checkout"><div class="row"><h2>测试商品</h2><span class="muted">01 / CHECKOUT</span></div><div class="item"><div class="icon">↗</div><div><strong>API 接入体验包</strong><p>一次性测试 · 无需配送</p></div></div><div class="price"><span>沙盒测试金额</span><strong><small>USD</small> 1.00</strong></div><p id="config" class="notice" role="status">正在读取后台配置…</p><button id="create" disabled>创建订单，前往 PayPal</button><button id="resume" class="secondary" hidden>继续批准已有订单</button><div class="actions"><button id="capture" class="secondary" disabled>完成测试并核验</button><button id="query" class="secondary" disabled>查询订单</button></div><p class="footnote">Secret 和访问令牌只保存在后端。页面不接受修改金额。</p></section>
+  <section class="card progress"><div class="row"><h2>接入进度</h2><button id="refresh" class="textbutton">刷新状态 ↻</button></div><ol><li><span>1</span><div><strong>登录开发者后台</strong><p>使用 PayPal 账号；不支持 GitHub 登录</p></div></li><li><span>2</span><div><strong>创建 Sandbox 应用</strong><p id="credential-step">等待后台凭据配置</p></div></li><li><span>3</span><div><strong>准备虚拟买家 / 商家</strong><p>商家绑定应用，买家用于批准付款</p></div></li><li><span>4</span><div><strong>后端创建订单</strong><p id="order-step">尚未创建测试订单</p></div></li><li><span>5</span><div><strong>批准、收款并查询核验</strong><p id="result-step">尚未完成真实沙盒测试</p></div></li></ol></section></div>
+  <section class="result" aria-live="polite"><div class="row"><h2>请求结果</h2><span id="badge">尚未付款</span></div><pre id="output">本地页面已就绪。没有配置沙盒凭据时，不会向 PayPal 创建订单。</pre></section>
+  <footer>本地验证原型 · 非 PayPal 官方页面 · 重启服务后本机会话和订单记录清空</footer>
+</main></body></html>
