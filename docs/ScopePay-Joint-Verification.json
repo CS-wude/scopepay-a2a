@@ -1,0 +1,95 @@
+{
+  "scope": "Live language model, signed contract-change A2A and Braintree Sandbox in one workspace",
+  "checks": {
+    "requiredScopeAndAuthorizedPackage": true,
+    "paymentBeforeOwnerApprovalBlocked": true,
+    "providerAmountCurrencyMerchantOrder": true,
+    "repeatedPaymentReturnsSameTransaction": true,
+    "subtitleStructureAndModelReview": true,
+    "singleBudgetConsumption": true,
+    "actualColorVideoNotClaimed": true
+  },
+  "passed": true,
+  "negotiationState": "awaiting_review",
+  "transaction": {
+    "provider": "Braintree Sandbox",
+    "amountMinor": 1000,
+    "currency": "USD",
+    "status": "submitted_for_settlement",
+    "settled": false,
+    "transactionFingerprint": "c9cb33b52ec3ca7e86208f18022dd5b813bff74c52138e3716b085bd9970c1a0",
+    "orderFingerprint": "b9951af124f7bdbd9db9443df1c727daab5e190cffbfc5e1ba46dddc56f33253",
+    "transactionsForOrder": 1,
+    "createCallsThisInvocation": 1
+  },
+  "modelCalls": 3,
+  "a2aTasks": 3,
+  "negotiationActions": [
+    {
+      "actor": "seller",
+      "action": "offer",
+      "amountMinor": 1500
+    },
+    {
+      "actor": "buyer",
+      "action": "offer",
+      "amountMinor": 1000
+    },
+    {
+      "actor": "seller",
+      "action": "accept",
+      "amountMinor": 1000
+    }
+  ],
+  "finalState": "partially_delivered",
+  "restartVerification": {
+    "scope": "Live language model, signed contract-change A2A and Braintree Sandbox in one workspace",
+    "checks": {
+      "requiredScopeAndAuthorizedPackage": true,
+      "providerAmountCurrencyMerchantOrder": true,
+      "repeatedPaymentReturnsSameTransaction": true,
+      "subtitleStructureAndModelReview": true,
+      "singleBudgetConsumption": true,
+      "actualColorVideoNotClaimed": true
+    },
+    "passed": true,
+    "negotiationState": "partially_delivered",
+    "transaction": {
+      "provider": "Braintree Sandbox",
+      "amountMinor": 1000,
+      "currency": "USD",
+      "status": "submitted_for_settlement",
+      "settled": false,
+      "transactionFingerprint": "c9cb33b52ec3ca7e86208f18022dd5b813bff74c52138e3716b085bd9970c1a0",
+      "orderFingerprint": "b9951af124f7bdbd9db9443df1c727daab5e190cffbfc5e1ba46dddc56f33253",
+      "transactionsForOrder": 1,
+      "createCallsThisInvocation": 0
+    },
+    "modelCalls": 3,
+    "a2aTasks": 3,
+    "negotiationActions": [
+      {
+        "actor": "seller",
+        "action": "offer",
+        "amountMinor": 1500
+      },
+      {
+        "actor": "buyer",
+        "action": "offer",
+        "amountMinor": 1000
+      },
+      {
+        "actor": "seller",
+        "action": "accept",
+        "amountMinor": 1000
+      }
+    ],
+    "finalState": "partially_delivered"
+  },
+  "regression": {
+    "tests": 152,
+    "passed": 152,
+    "failed": 0,
+    "syntaxModules": 51
+  }
+}

@@ -57,16 +57,28 @@ The following explicit command creates a virtual USD 1 Sandbox sale if there is 
 npm run braintree:smoke
 ```
 
-The original signed-A2A payment demonstration uses the ScopePay entry point. Set SCOPEPAY_PAYMENT_MODE=sandbox and select fixture or live model mode explicitly, then run `npm run scopepay:start` (http://127.0.0.1:8980). That observer workflow is distinct from the marketplace UI. Do not infer that the online-model marketplace and Braintree were jointly accepted from separate evidence records.
+The original signed-A2A payment demonstration uses the ScopePay entry point. Set SCOPEPAY_PAYMENT_MODE=sandbox and select fixture or live model mode explicitly, then run `npm run scopepay:start` (http://127.0.0.1:8980). That observer workflow is distinct from the marketplace UI. The original separate records must not be combined into a joint-run claim. A later direct contract-change joint verification is documented below.
+
+## Joint live-model and Braintree Sandbox verification
+
+Configure your own model and Braintree Sandbox credentials in the local .env, then explicitly run:
+
+```sh
+node --env-file=.env scopepay/joint-smoke.mjs
+```
+
+This command may create one virtual USD 10 Sandbox sale. It uses a persistent isolated workspace under .evidence/joint-live-sandbox. Reuse the same root after interruption; do not delete it and start over to recover an unknown payment. No production payment mode exists. The default npm test command never invokes this external verification.
+
+The recorded joint run passed: the live model interpreted the request, separate A2A agents exchanged USD 15 and USD 10 packages, owner approvals were supplied by the test driver, Braintree created and returned one verified Sandbox transaction, and the live model generated and reviewed French subtitles. A repeated payment and a restart both reused the same transaction. The provider state was submitted_for_settlement, not final settlement. Color-video delivery remained pending. See the [sanitized check results](docs/ScopePay-Joint-Verification.json) and Appendix D of the English report. The existing demonstration video still shows the local-ledger workflow.
 
 ## What was evaluated
 
 - Three online-model contract-change runs agreed on USD 10 standard delivery, preserving included color work and new French subtitles while dropping optional rush. They used an isolated ledger; subtitles passed program checks and actual color-video delivery remained pending.
 - Exact calendar deadlines with conditional glossary/feedback obligations, and combined quality-repair/new-work requests, each paused in three tested runs. These complete scenario families did not pass business acceptance.
-- A separate Braintree Sandbox record validated a USD 10 transaction as submitted for settlement. Its decision outputs were predetermined. This is not final settlement or evidence of the latest online-model path running with Braintree in one end-to-end test.
+- A separate Braintree Sandbox record validated a USD 10 transaction as submitted for settlement. Its decision outputs were predetermined. This historical record is not final settlement and is separate from the later joint experiment above.
 - Budget reservation, unknown payment results, original-order recovery, stale agreements, role-specific interaction and duplicate included-work allocation have regression coverage.
 
-The detailed Chinese technical and test report, including an English project summary, is included in [the report](docs/ScopePay参赛技术与测试报告-PayPal.docx).
+The complete [English technical and evaluation report](docs/ScopePay-Technical-and-Evaluation-Report.md) includes all three scenario families and the joint verification supplement. A [Word edition](docs/ScopePay-Technical-and-Evaluation-Report.docx) is available. The [original Chinese baseline report](docs/ScopePay参赛技术与测试报告-PayPal.docx) is retained; its earlier separation-of-evidence statement is extended by Appendix D of the English report.
 
 ## Architecture and navigation
 

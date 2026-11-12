@@ -26,7 +26,7 @@ The main challenge was giving two agents an executable negotiation domain instea
 
 The recorded regression baseline is 152 passing tests. Three online-model contract-change runs retained included color adjustment and new French subtitles at USD 10 by dropping optional rush. Subtitle checks passed; actual color-video delivery remained pending. Two more complex scenario families each paused in three runs because exact deadlines, conditional obligations or quality evidence were not fully represented; no payment was made for those paused requests.
 
-A separate Braintree Sandbox record verifies a USD 10 sale as submitted for settlement, not final settlement. That record used predetermined decision outputs and is separate from the online-model experiments. A combined online-model and Braintree run is not claimed from those separate records.
+A separate Braintree Sandbox record verifies a USD 10 sale as submitted for settlement, not final settlement. That record used predetermined decision outputs and is separate from the online-model experiments. A separate joint contract-change experiment now connects the live model, signed A2A messages, Braintree Sandbox creation and independent lookup, repeated-payment protection, and French subtitle generation/review in the same persistent workspace. It creates one virtual USD 10 sale with status submitted_for_settlement; restart and retry reuse that transaction. Color-video delivery remains pending. This one integration experiment does not change the outcomes of the original three scenario families. The demonstration video shows the earlier local-ledger workflow.
 
 ## What's next
 
@@ -38,7 +38,7 @@ Built by a full-stack developer exploring delegated agent-to-agent commerce.
 
 ## Technical report
 
-The [technical and test report](docs/ScopePay参赛技术与测试报告-PayPal.docx) is included in this work. It contains the negotiation-theory basis, development tests, three business scenario details and an English project summary.
+The full [English technical and evaluation report](docs/ScopePay-Technical-and-Evaluation-Report.md), its [Word edition](docs/ScopePay-Technical-and-Evaluation-Report.docx), and [sanitized joint check results](docs/ScopePay-Joint-Verification.json) are included. The report covers negotiation theory, development tests, all three scenario details and Appendix D joint verification. The Chinese baseline report is retained as the original record.
 
 ## Built with
 
